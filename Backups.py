@@ -100,5 +100,5 @@ yandex_upload.folder_creation()
 photos_list = os.listdir('photos_users_vk')
 for photo in photos_list:
     file_name = photo
-    files_path = os.getcwd() + '\photos_users_vk\\' + photo
+    files_path = os.path.join(os.getcwd(), 'photos_users_vk', photo)
     result = yandex_upload.ya_disk_upload(files_path)
